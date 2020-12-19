@@ -13,30 +13,32 @@ body{
 }
 
 .contenedor{
+    max-width: 636px; /*ancho*/
+    max-height: 475px; /*alto*/
+    overflow: hidden;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border: 1px;
     border-radius: 10px;
-    width: 636px;
-    height: 475px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     box-shadow: 3px 3px 5px rgba(192, 192, 192, 0.931);
 }
 
 .contenedor .contenedor-top{
     background-color: white;
     border-radius: 10px 10px 0 0;
-    height: 217px;
+    max-height: 46%;
+    width: 100%;
 }
 
 .contenedor .contenedor-top .contenedor-top-info{
     margin: 40px;
 }
 
-.contenedor .contenedor-top h1{
+.contenedor .contenedor-top .contenedor-top-info h1{
     margin-top: 0;
     color: hsl(179, 62%, 43%);
     font-size: 2.6rem;
@@ -53,25 +55,28 @@ body{
     font-weight: 700;
     color: hsl(218, 22%, 67%, .6);
     line-height: 23px;
+    margin-right: 51px;
 }
 
 .contenedor .contenedor-bajo{
-    height: 258px;
     display: flex;
-}
-
-.contenedor .contenedor-bajo .contenedor-bajo-d1, .contenedor .contenedor-bajo .contenedor-bajo-d2{
-    width: 318px;
-    height: 258px;
-    color: hsl(204, 43%, 93%);
+    justify-content: space-around;
+    max-height: 54%;
+    width: 100%;
 }
 
 .contenedor .contenedor-bajo .contenedor-bajo-d1{
+    width: 50%;
+    height: 100%;
+    color: hsl(204, 43%, 93%);
     background-color: hsl(179, 62%, 43%);
     border-radius: 0 0 0 10px;
 }
 
 .contenedor .contenedor-bajo .contenedor-bajo-d2{
+    width: 50%;
+    height: 100%;
+    color: hsl(204, 43%, 93%);
     background-color: hsl(179, 62%, 43%, .8);
     border-radius: 0 0 10px 0;
 }
@@ -105,8 +110,8 @@ h3{
 
 .contenedor .contenedor-bajo .contenedor-bajo-d1 .contenedor-bajo-d1-info input{
     background-color: hsl(71, 73%, 54%);
-    width: 238px;
-    height: 50px;
+    width: 100%;
+    height: 48px;
     border: none;
     border-radius: 5px;
     box-shadow: 3px 3px 3px hsl(179, 62%, 43%);
@@ -118,4 +123,72 @@ h3{
     line-height: 20px;
     font-size: 13px;
     color: hsl(204, 43%, 93%, .5);
+}
+
+@media screen and (max-width: 670px){
+    .contenedor{
+        width: 80%; 
+        max-height: 700px;  
+    }
+
+    .contenedor .contenedor-top{
+        height: 230px;
+        border-radius: 2px 2px 0 0;
+    }
+
+    .contenedor .contenedor-top .contenedor-top-info{
+        margin: 20px;
+    }
+
+    .contenedor .contenedor-top .contenedor-top-info h1{
+        margin-top: 15px;
+        font-size: 2rem;
+    }
+
+    .contenedor .contenedor-top .contenedor-top-p1{
+        font-size: 14px;
+    }
+
+    .contenedor .contenedor-top .contenedor-top-p2{
+        font-size: 12.5px;
+        margin-right: 0;
+    }
+
+    .contenedor .contenedor-bajo{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenedor .contenedor-bajo .contenedor-bajo-d1{
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .contenedor .contenedor-bajo .contenedor-bajo-d2{
+        width: 100%;
+    }
+
+    .contenedor .contenedor-bajo .contenedor-bajo-d1 .contenedor-bajo-d1-info, .contenedor .contenedor-bajo .contenedor-bajo-d2 .contenedor-bajo-d2-info{
+        margin: 20px;
+    }
+
+    h3{
+        font-size: 16px;
+    }
+
+    .contenedor .contenedor-bajo .contenedor-bajo-d1 .contenedor-bajo-d1-info h2{
+        font-size: 28px;
+    }
+
+    .contenedor .contenedor-bajo .contenedor-bajo-d1 .contenedor-bajo-d1-info p{
+        font-size: 14px;
+    }
+
+    .contenedor .contenedor-bajo .contenedor-bajo-d1 .contenedor-bajo-d1-info input{
+        height: 40px;
+    }
+
+    .contenedor .contenedor-bajo .contenedor-bajo-d2 .contenedor-bajo-d2-info p{
+        font-size: 12px;
+    }
 }
